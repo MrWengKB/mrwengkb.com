@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Redirecting… · MrWengKB's Creations</title>
+  <!--
+    Short links: any page that doesn't exist on mrwengkb.com is forwarded to the same path on mrwengkb.github.io.
+    e.g. mrwengkb.com/HanziBattle/  ->  https://mrwengkb.github.io/HanziBattle/
+    Pages that do exist here (/, /privacy.html, /classmanager/) are served as normal.
+  -->
+  <script>
+    location.replace('https://mrwengkb.github.io' + location.pathname + location.search + location.hash);
+  </script>
+</head>
+<body>
+  <p>Redirecting to <a id="to" href="https://mrwengkb.github.io/">mrwengkb.github.io</a>…</p>
+  <script>
+    var a = document.getElementById('to');
+    a.href = 'https://mrwengkb.github.io' + location.pathname + location.search + location.hash;
+    a.textContent = 'mrwengkb.github.io' + location.pathname;
+  </script>
+</body>
+</html>
